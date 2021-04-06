@@ -1,0 +1,6 @@
+# ignore obj and build directories
+**/obj
+**/build
+
+# ignore executable
+TextRally
