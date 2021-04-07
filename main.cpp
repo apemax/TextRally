@@ -169,6 +169,8 @@ int main()
                 //std::this_thread::sleep_for(std::chrono::seconds(1));
               }
 
+              std::this_thread::sleep_for(std::chrono::seconds(1));
+
               cout << "GO" << endl;
               cout << endl;
               cout << NewhouseBridge.PaceNotes[0][0] << endl;
@@ -183,7 +185,7 @@ int main()
 
               cout << endl;
 
-              if (OptInput != NewhouseBridge.PaceNotes[0][1])
+              if (OptInput != NewhouseBridge.PaceNotes[0][1] || OptInput != NewhouseBridge.PaceNotes[0][2])
               {
                 TotalPenaltyTime = TotalPenaltyTime + PenaltyTime;
               }
@@ -200,7 +202,7 @@ int main()
 
               cout << endl;
 
-              if (OptInput != NewhouseBridge.PaceNotes[1][1])
+              if (OptInput != NewhouseBridge.PaceNotes[1][1] || OptInput != NewhouseBridge.PaceNotes[1][2])
               {
                 TotalPenaltyTime = TotalPenaltyTime + PenaltyTime;
               }
@@ -217,7 +219,7 @@ int main()
 
               cout << endl;
 
-              if (OptInput != NewhouseBridge.PaceNotes[2][1])
+              if (OptInput != NewhouseBridge.PaceNotes[2][1] || OptInput != NewhouseBridge.PaceNotes[2][2])
               {
                 TotalPenaltyTime = TotalPenaltyTime + PenaltyTime;
               }
@@ -234,7 +236,7 @@ int main()
 
               cout << endl;
 
-              if (OptInput != NewhouseBridge.PaceNotes[3][1])
+              if (OptInput != NewhouseBridge.PaceNotes[3][1] || OptInput != NewhouseBridge.PaceNotes[3][2])
               {
                 TotalPenaltyTime = TotalPenaltyTime + PenaltyTime;
               }

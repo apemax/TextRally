@@ -28,7 +28,7 @@ class Stage
 {
   public:
     Stage();
-    string PaceNotes[20][2];
+    string PaceNotes[20][3];
 };
 
 extern Stage NewhouseBridge;
