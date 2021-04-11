@@ -25,10 +25,12 @@
 #include <thread>
 #include "stage.h"
 #include "player.h"
+#include "controls.h"
 using namespace std;
 
 Stage NewhouseBridge;
 Player PlayerOne;
+Controls ControlsConfig;
 
 int main()
 {
@@ -135,9 +137,11 @@ int main()
           cout << "Type controls to view commands." << endl;
           cout << "Type start to begin the rally." << endl;
 
+          cout << endl;
+
           while (RunningStage == true)
           {
-            cout << endl;
+            cout << "> ";
 
             getline(cin, OptRally);
 
@@ -147,18 +151,7 @@ int main()
             }
             else if (OptRally == "controls")
             {
-              cout << "Type commands in order in response to each co-driver call:" << endl;
-              cout << endl;
-              cout << "Accelerate.......... T or Throttle" << endl;
-              cout << "Brake............... B or Brake" << endl;
-              cout << "Steer Left.......... L or Left" << endl;
-              cout << "Steer Right......... R or Right" << endl;
-              cout << "Gear Up............. U or Up" << endl;
-              cout << "Gear Down........... D or Down" << endl;
-              cout << "Clutch.............. C or Clutch" << endl;
-              cout << endl;
-              cout << "Open pause menu..... Esc" << endl;
-              cout << endl;
+              ControlsConfig.ShowControls();
             }
             else if (OptRally == "start")
             {
@@ -168,6 +161,8 @@ int main()
 
                 //std::this_thread::sleep_for(std::chrono::seconds(1));
               }
+
+              cout << endl;
 
               std::this_thread::sleep_for(std::chrono::seconds(1));
 
@@ -294,20 +289,7 @@ int main()
     }
     else if (OptMain == "controls")
     {
-      cout << endl;
-
-      cout << "Type commands in order in response to each co-driver call:" << endl;
-      cout << endl;
-      cout << "Accelerate.......... T or Throttle" << endl;
-      cout << "Brake............... B or Brake" << endl;
-      cout << "Steer Left.......... L or Left" << endl;
-      cout << "Steer Right......... R or Right" << endl;
-      cout << "Gear Up............. U or Up" << endl;
-      cout << "Gear Down........... D or Down" << endl;
-      cout << "Clutch.............. C or Clutch" << endl;
-      cout << endl;
-      cout << "Open pause menu..... Esc" << endl;
-      cout << endl;
+      ControlsConfig.ShowControls();
     }
     else if (OptMain == "exit")
     {

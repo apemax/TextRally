@@ -1,13 +1,13 @@
 CC = g++
 CXXFLAGS = -no-pie -Werror -Wall -Wextra
-DEPS = player.h stage.h
+DEPS = player.h stage.h controls.h
 
 ODIR = obj
 BUILD_DIR = build
 
 BIN = TextRally
 
-_OBJ = main.o player.o stage.o
+_OBJ = main.o player.o stage.o controls.o
 OBJ = $(patsubst %,$(ODIR)/%,$(_OBJ))
 
 .SECONDEXPANSION:
